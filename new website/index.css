@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Kanit:wght@500&family=Lobster&family=Playfair+Display+SC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+}
+.header::before{
+    height: 100%;
+    content: "";
+    position: fixed;
+    background: url('background.png') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    animation: bubble 5s 5s 3s infinite forwards alternate;
+}
+#logo{
+    height: 60px;
+    width: 100px;
+    filter: invert(1);
+}
+.navbar{
+    border: rgba(114, 114, 255, 0.767);
+    border-radius: 5px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar h3{
+    font-family: 'Fredoka One', cursive;
+    color: #fdfcfd;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#btn{
+    color: #fdfcfd;
+    width: 110px;
+    background: transparent;
+    height: 40px;
+    border: 2px solid #fdfcfd;
+    border-radius: 14px;
+    padding: 3px 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btn:hover{
+    color: aqua;
+    background-color: #fdfcfd;
+}
+#body{
+    font-family: 'Kanit', sans-serif;;
+    color: #fdfcfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 28vh;
+    font-size: 2rem;
+}
+#water{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+.leaflets{
+    font-family: 'Playfair Display SC', serif;
+    border: 6px solid black;
+    border-radius: 14px;
+    background: transparent;
+    color: #fdfcfd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 97%;
+    margin: 5px 15px;
+    padding: 5px 8px;
+    font-size: 1.2rem;
+}
+.leaflets img{
+    border: 6px solid white;
+    border-radius: 14px;
+}
+.second{
+    font-family: 'Lobster', cursive;;
+    color: #fdfcfd;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.bubbles img{
+    height: 50px;
+    width: 50px;
+    animation: bubble 6s linear infinite;
+    opacity: 0;
+}
+.bubbles{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+}
+.bubbles img:nth-child(1){
+    height: 40px;
+    width: 25px;
+    animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 4s;
+}
+.bubbles img:nth-child(3){
+    height: 42px;
+    width: 30px;
+    animation-delay: 5s;
+}
+.bubbles img:nth-child(4){
+    width: 35px;
+    animation-delay: 6s;
+}
+.bubbles img:nth-child(5){
+    
+    animation-delay: 7s;
+}
+.bubbles img:nth-child(6){
+    width: 40px;
+    animation-delay: 5s;
+}
+.bubbles img:nth-child(7){
+    width: 35px;
+    animation-delay: 1s;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+hr{
+    height: 5px;
+    background-color: #fdfcfd;
+}
+
+

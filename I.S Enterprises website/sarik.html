@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <title>I.S EnterPrises</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #hamberger {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            top: 5%;
+            right: 5%;
+        }
+
+        .line {
+            width: 33px;
+            background-color: white;
+            margin: 5px 3px;
+            height: 3px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: rgba(56, 40, 40, 0);
+        }
+
+        /* Navigation Bar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0px;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.69;
+        }
+
+        /* Navigation Bar: Logo and Image */
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+        }
+
+
+        /* Navigation Bar: List Styling */
+
+        #navbar ul {
+            display: flex;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        #company_name {
+            font-size: 35px;
+            font-weight: bold;
+            margin: 3px 100px;
+            font-family: 'Baloo Bhai', cursive;
+            color: aliceblue;
+        }
+
+        #Home {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+
+            flex-direction: column;
+        }
+
+        .Items {
+            color: brown;
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+            font-size: 50px;
+        }
+
+        .para {
+            font-size: 20px;
+            font-family: 'Baloo Bhai', cursive;
+            text-align: center;
+        }
+
+        #BTN {
+            width: 130px;
+            height: 45px;
+            padding: 0px 0px;
+            margin: 0px auto;
+            border-radius: 14px;
+            background-color: red;
+            border: 2px solid black;
+            font-size: 18px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #BTN:hover {
+            color: red;
+            background-color: white;
+            border: 2px solid black;
+
+        }
+
+        #Home::before {
+            content: "";
+            position: absolute;
+            background: url('cover.png.jpg') no-repeat center center/cover;
+            height: 662px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.89;
+        }
+
+        #About {
+            padding: 0px 38px;
+            margin: 75px 0px;
+            background-color: #fff0ea;
+        }
+
+        .para2 {
+            color: black;
+            margin: 25px;
+            font-size: 25px;
+            font-family: 'Baloo Bhai', cursive;
+        }
+
+        .Dict1 {
+            color: red;
+            font-size: 35px;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #services {
+            margin: auto;
+            padding: 0px 0px;
+        }
+
+        .Boxes {
+            display: flex;
+            margin: 25px;
+        }
+
+        .Box {
+            display: flex;
+            flex-direction: column;
+            border: 3px solid red;
+            border-radius: 14px;
+            text-align: center;
+            width: auto;
+            height: auto;
+            margin: auto;
+            padding: 35px 45px;
+            background-color: #fff0ea;
+        }
+
+        .heading {
+            color: brown;
+            text-align: center;
+            font-family: 'Bree Serif', serif;
+            font-size: 50px;
+            color: black;
+        }
+
+        hr {
+            height: 3px;
+            background-color: black;
+        }
+
+        .Icons {
+            height: 130px;
+            width: 240px;
+            margin: 0px auto;
+        }
+
+        .list2 {
+            margin-top: 0px;
+            font-family: 'Bree Serif', serif;
+            font-size: 17px;
+            align-items: center;
+        }
+
+        .Dict2 {
+            margin-top: 0px;
+            font-family: 'Baloo Bhai', serif;
+            font-size: 30px;
+            align-items: center;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 135%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        #whole {
+            background: url('https://www.bing.com/images/blob?bcid=S-6C6G4UcVgC8AuRqHTUlyEGKZT7.....zE') no-repeat;
+            margin: 10px 10px;
+            padding: 5px 5px;
+            border: 3px solid black;
+            border-radius: 14px;
+        }
+
+        #retail {
+            background: url('https://www.bing.com/images/blob?bcid=S-6C6G4UcVgC8AuRqHTUlyEGKZT7.....zE') no-repeat;
+            display: none;
+            margin: 10px 10px;
+            padding: 5px 5px;
+            border: 3px solid black;
+            border-radius: 14px;
+        }
+
+        #Contact {
+            margin-top: 20px;
+        }
+
+        .Buttons {
+            display: table;
+            margin: auto;
+        }
+
+        .BUTTON {
+            height: 45px;
+            width: 135px;
+            border: 3px solid black;
+            color: white;
+            background-color: red;
+            border-radius: 14px;
+            margin: 3px 13px;
+            font-family: 'Bree Serif', serif;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        .type {
+            font-family: 'Baloo Bhai', serif;
+            font-size: 35px;
+            margin-left: 0px;
+        }
+
+        .BUTTON:hover {
+            color: white;
+            background-color: black;
+            border: 3px solid red;
+        }
+
+        .Mores {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-row-gap: 1.3rem;
+            grid-column-gap: 1.3rem;
+        }
+
+        .more {
+            display: flex;
+            justify-content: center;
+            height: 90px;
+            padding: 4px 4px;
+            margin: 5px;
+            background-color: blueviolet;
+            color: black;
+            border: 3px solid black;
+            border-radius: 7px;
+            font-size: 30px;
+            font-family: 'Bree Serif', serif;
+            cursor: pointer;
+            transition: all 0.6s ease-in-out;
+        }
+
+        .more:first-child {
+            grid-column: 1/span 2;
+        }
+
+        .more:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        .submitting {
+            height: 62px;
+            width: 145px;
+            color: white;
+            background-color: black;
+            border: 3px solid white;
+            border-radius: 6px;
+            margin: 3px auto;
+            padding: 5px 10px;
+            font-size: 20px;
+            font-family: 'Bree Serif', serif;
+            cursor: pointer;
+        }
+
+        .submitting:hover {
+            color: black;
+            border: 3px solid black;
+            background-color: white;
+        }
+
+        .footer {
+            background-color: black;
+        }
+
+        .copyWright {
+            display: flex;
+            color: white;
+            font-size: 17px;
+            font-family: 'Baloo Bhai', serif;
+            justify-content: center;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        #greetin {
+            z-index: -1;
+            display: none;
+            border: 4px solid black;
+            border-radius: 14px;
+            justify-content: center center;
+            align-items: center;
+            height: 130px;
+            width: 290px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 20px;
+            margin: 15px 40px;
+            font-family: 'Bree Serif', serif;
+            position: relative;
+            animation-name: greeting_animation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+
+        #greeting1 {
+            z-index: -1;
+            border: 4px solid black;
+            border-radius: 14px;
+            display: none;
+            justify-content: center center;
+            align-items: center;
+            height: 130px;
+            width: 290px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 20px;
+            margin: 15px 40px;
+            font-family: 'Bree Serif', serif;
+            position: relative;
+            animation-name: greeting_animation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+        #greeting2 {
+            z-index: -1;
+            border: 4px solid black;
+            border-radius: 14px;
+            display: none;
+            justify-content: center center;
+            align-items: center;
+            height: 130px;
+            width: 290px;
+            margin: 15px 40px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 20px;
+            font-family: 'Bree Serif', serif;
+            position: relative;
+            animation-name: greeting_animation;
+            animation-duration: 2.5s;
+            animation-iteration-count: 1;
+        }
+
+        @keyframes greeting_animation {
+            from {
+                width: 10px;
+                color: blueviolet;
+            }
+
+            to {
+                width: 290px;
+            }
+        }
+
+        .message {
+            margin-top: auto;
+            height: 460px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #nav_item {
+            display: flex;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            #hamberger {
+                display: none;
+            }
+
+            #navbar {
+                flex-direction: column;
+            }
+
+            #company_name {
+                display: none;
+            }
+
+            #navbar ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            html {
+                width: auto;
+            }
+
+            /* Home-Section */
+            #Home {
+                height: 165px;
+                margin-bottom: -290;
+                margin-top: 90;
+            }
+
+            #Home::before {
+                height: 480px;
+            }
+
+            .heading {
+                font-size: 33px;
+            }
+
+            .para {
+                font-size: 12px;
+            }
+
+            /* About Us-Section */
+
+
+            /* Our Service-section */
+            .Boxes {
+                flex-direction: column;
+            }
+
+            #services {
+                width: auto;
+            }
+
+
+            /* contact */
+            #contact {
+                margin-top: 20px;
+            }
+
+            .Boxes {
+                margin: 10px
+            }
+
+            .form {
+                width: 200px;
+            }
+
+            #greetin {
+                margin: 0px 0px;
+                padding: 0px 0px;
+                z-index: -1;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border: 4px solid black;
+                border-radius: 4px;
+                justify-content: center;
+                height: 30px;
+                width: 98%;
+                color: white;
+                font-size: 15px;
+            }
+
+            #greeting1 {
+                margin: 0px 0px;
+                padding: 0px 0px;
+                z-index: -1;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border: 4px solid black;
+                border-radius: 4px;
+                justify-content: center;
+                height: 30px;
+                width: 98%;
+                color: white;
+                font-size: 15px;
+            }
+
+            #greeting2 {
+                margin: 0px 0px;
+                padding: 0px 0px;
+                z-index: -1;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border: 4px solid black;
+                border-radius: 4px;
+                justify-content: center;
+                height: 30px;
+                width: 98%;
+                color: white;
+                font-size: 15px;
+            }
+
+            @keyframes greeting_animation {
+                from {
+                    height: 10px;
+                    color: blueviolet;
+                }
+
+                to {
+                    height: 30px;
+                }
+            }
+
+            .Box {
+                padding: 22px 0px;
+            }
+
+            #nav_item {
+                display: flex;
+            }
+        }
+
+        @media only screen and (max-width: 490px) {
+            #navbar {
+                flex-direction: row;
+            }
+
+            .message {
+                margin-top: 70px;
+            }
+
+            #hamberger {
+                display: block;
+            }
+
+            #whole {
+                padding: 5px 0px;
+            }
+
+            #navbar ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            .Mores {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            #About {
+                margin: 70px 0px;
+                padding-right: 0px;
+            }
+
+            .para2 {
+                color: black;
+                margin: auto;
+                font-size: 20px;
+                font-family: 'Baloo Bhai', cursive;
+            }
+
+            .Dict1 {
+                font-size: 30px;
+            }
+
+            .Box {
+                padding: 20px 0px;
+            }
+
+            .copyWright {
+                text-align: center;
+            }
+
+            .BUTTON {
+                margin: 3px 10px;
+            }
+
+            #company_name {
+                display: block;
+                font-size: 30px;
+                font-weight: bold;
+                margin: 0px 0px;
+                font-family: 'Baloo Bhai', cursive;
+                color: aliceblue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="" height="60px" width="100px">
+        </div>
+        <ul id="nav_item">
+            <li class="item"> <a href="#Home">HOME</a> </li>
+            <li class="item"> <a href="#About">About</a> </li>
+            <li class="item"> <a href="#services">Services</a></li>
+            <li class="item"> <a href="#Contact">Contact Us</a></li>
+            <li class="item"> <a href="#More">More...</a></li>
+        </ul>
+        <h3 id="company_name">I.S EnterPrises</h3>
+        <div id="hamberger" onclick="toggleHide()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div id="body" onclick="only_hide()">
+        <section id="Home">
+            <div class="message">
+                <h1 class="heading">Welcome To I.S Family</h1>
+                <h5 class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum dolores beatae modi
+                    sed
+                    vel. Eius tenetur distinctio ipsa Lorem <br> ipsum dolor sit, amet consectetur adipisicing elit.
+                    Voluptatibus, harum. Aspernatur enim aliquid quas est consequuntur neque consequatur molestiae
+                    officiis!.</h5>
+                <button id="BTN">Order Clothes</button>
+            </div>
+            <div class="Greeting">
+                <div id="greetin">
+                    Happy Good morning From I.S Family
+                </div>
+                <div id="greeting1">
+                    Happy Good Evening From I.S Family
+                </div>
+                <div id="greeting2">
+                    Happy Good AfterNoon From I.S Family
+                </div>
+            </div>
+        </section>
+        <section id="About">
+            <ul>
+                <h1 class="Items">About Us</h1>
+                <div class="General">
+                    <li>
+                        <h3 class="Dict1">
+                            General
+                        </h3>
+                    </li>
+                    <h5 class="para2">
+                        We specifically sold wholesale material Raw clothes of women like Tafta Booti etc. All thing and
+                        we
+                        sold both material retail also. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Architecto
+                        qui, quos dolores et possimus ab atque voluptatum tenetur aut unde. Nulla voluptatibus corporis
+                        totam exercitationem! Perferendis aperiam rerum ullam! Saepe quam magni repudiandae aperiam! Sit
+                        fugit quam fuga recusandae ut vero expedita, iste, delectus rem consequuntur, eos dolore enim
+                        eveniet.
+                    </h5>
+                </div>
+                <hr>
+                <div class="Rate">
+                    <li>
+                        <h3 class="Dict1">
+                            Rate Criteria
+                        </h3>
+                    </li>
+                    <h5 class="para2">
+                        Rate of our clothes is depend on How much meter clothes you buy and its per meter RaTe there is
+                        no
+                        margin on rate but we suggest you to login on this website so, whenever there is offer so, you
+                        become first viewer of that. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Consectetur
+                        pariatur earum recusandae quo in veniam! Officiis non sed minus iure doloremque deleniti facilis
+                        ad
+                        dolores inventore. Minima culpa optio, nesciunt ducimus possimus repellendus sed officiis, ipsa,
+                        perspiciatis debitis blanditiis nostrum?
+                    </h5>
+                </div>
+                <hr>
+                <div class="Quality">
+                    <li>
+                        <h3 class="Dict1">Quality</h3>
+                    </li>
+                    <h5 class="para2">
+                        Our clothes directly imprted by surat and it is really of good quality clothes and already lakhs
+                        of
+                        people have purchasen the clothes from us by online. Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Explicabo expedita sit adipisci? Autem dolore, illum vero, quibusdam minus
+                        odio
+                        error animi quia ea sit, doloremque ad ratione! Voluptatibus, maxime odio.
+                    </h5>
+                </div>
+                <hr>
+                <div class="Policy">
+                    <li>
+                        <h3 class="Dict1">Our Policy And Trust</h3>
+                    </li>
+                    <h5 class="para2">
+                        <ol>
+                            <li>
+                                <h4>Our Trust</h4>
+                            </li>
+                        </ol>
+                        already thousand of people have trust on us if you have any doubt about us so dont hesitate
+                        directly
+                        contact to owner and if you not compatible with purchasing online so, you can purchase it by
+                        offline
+                        by giving you only contacting information we will call you and help you.
+                        <ol>
+                            <li>
+                                <h4>Our Policy</h4>
+                            </li>
+                        </ol>
+                        if you want to purchase wholesale so its rate is different and retail rate is different and
+                        there is
+                        one condition that in wholesale you have purchase 10m minimum. and in retail less than 5m piece
+                        will
+                        not be return.
+                    </h5>
+                </div>
+            </ul>
+        </section>
+        <section id="services">
+            <h1 class="Items">Our Services</h1>
+            <div class="Boxes">
+                <div class="Box">
+                    <img class="Icons" src="https://www.bing.com/images/blob?bcid=S.ggwL6v1lgC8AuRqHTUlyEGKZT7.....0M"
+                        alt="Transport">
+                    <h3 class="Dict2">
+                        Transport
+                    </h3>
+                    <h5 class="list2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, maiores voluptas. Veritatis
+                        laudantium doloribus error repellat nihil aliquam at saepe debitis vitae consequatur eveniet
+                        nisi
+                        enim, aperiam nobis itaque omnis quia quisquam praesentium. Saepe nostrum quis exercitationem
+                        iure
+                        tempore ducimus, pariatur reprehenderit, hic reiciendis cumque facere aperiam inventore
+                        laboriosam!
+                        Exercitationem.
+                    </h5>
+                </div>
+                <div class="Box">
+                    <img class="Icons"
+                        src="http://files.us.gositebuilder.com/28/95/2895952d-ebad-44f8-bd49-547cbcbd357e.jpg"
+                        alt="Bill">
+                    <h3 class="Dict2">
+                        Bills Making
+                    </h3>
+                    <h5 class="list2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium excepturi, ab unde fugiat
+                        maxime
+                        repellat ullam assumenda eos deserunt quae accusantium, quasi illum nemo repellendus dolor ipsa
+                        iste
+                        cupiditate? Autem mollitia, amet a facilis provident minus illum eligendi minima? Nulla numquam
+                        perferendis id error natus harum delectus. Ea, officiis odit.
+                    </h5>
+                </div>
+                <div class="Box">
+                    <img class="Icons" src="https://www.bing.com/images/blob?bcid=Swy6Bv0gP1gC8AuRqHTUlyEGKZT7.....zA"
+                        alt="Rate">
+                    <h3 class="Dict2">
+                        Return Or Change
+                    </h3>
+                    <h5 class="list2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, reiciendis doloribus at optio
+                        earum, laudantium suscipit, repudiandae commodi minus magnam non facilis sapiente aperiam
+                        quaerat
+                        quo qui beatae quam perferendis ipsam quas modi harum placeat accusamus? Illum ipsa rerum, optio
+                        mollitia veritatis distinctio voluptate laborum tenetur iusto quasi cupiditate aliquam?
+                    </h5>
+                </div>
+            </div>
+        </section>
+        <section id="Contact">
+            <h1 class="Items">Contact Us</h1>
+            <div class="Buttons">
+                <button id="show" class="BUTTON" onclick="hide()">WholeSaler</button>
+                <button id="none" class="BUTTON" onclick="hide2()">ReTailer</button>
+            </div>
+            <div id="whole">
+                <div id="contact-box">
+                    <form action="">
+                        <div class="type">
+                            For WholeSaler.
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" class="form" name="name" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="email" class="form" name="name" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number: </label>
+                            <input type="phone" class="form" name="name" id="phone" placeholder="Enter your phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="Meter">Meter of clothes</label>
+                            <input type="text" class="form" name="Meter" id="Quantity" placeholder="Only More Than 10m">
+                        </div>
+                        <div class="form-group">
+                            <label for="Product">Name Of Cloth</label>
+                            <input type="text" class="form" name="Product" id="Product" placeholder="Any Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message And FeedBack: </label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="Submit">
+                            <button class="submitting">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="retail">
+                <div id="contact-box">
+                    <form action="">
+                        <div class="type">
+                            For ReTailer.
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name: </label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email: </label>
+                            <input type="email" name="name" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number: </label>
+                            <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="Meter">Meter of clothes</label>
+                            <input type="text" name="Meter" id="Quantity" placeholder="Only Less Than 10m">
+                        </div>
+                        <div class="form-group">
+                            <label for="Product">Name Of Cloth</label>
+                            <input type="text" name="Product" id="Product" placeholder="Any Product Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message And FeedBack: </label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="Submit">
+                            <button class="submitting">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="More">
+            <h1 class="Items">More...</h1>
+            <div class="Mores">
+                <button class="more">Gallery</button>
+                <button class="more">Addres</button>
+                <button class="more">Facility</button>
+                <button class="more">Rates</button>
+                <button class="more">Branches</button>
+                <button class="more">Clients</button>
+                <button class="more">Availibility</button>
+                <button class="more">Need Website</button>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="copyWright">
+                Copyright &copy; Created by MD Rushaan Ansari.
+            </div>
+        </section>
+    </div>
+    <script>
+        let navbar = document.getElementById('navbar');
+        let burger = document.getElementById('hamberger');
+        let nav_item = document.getElementById('nav_item');
+        let morning = document.getElementById('greetin');
+        let after = document.getElementById('greeting2');
+        let Evening = document.getElementById('greeting1');
+        let name = document.getElementById('company_name');
+        function hide() {
+            let show = document.getElementById('show');
+            let retail = document.getElementById('retail');
+            let whole = document.getElementById('whole');
+            retail.style.display = 'none';
+            whole.style.display = 'block';
+        }
+        function hide2() {
+            let none = document.getElementById('none');
+            let whole = document.getElementById('whole');
+            let retail = document.getElementById('retail');
+
+            whole.style.display = 'none';
+            retail.style.display = 'block';
+        }
+        let newDate = new Date();
+        let hours = newDate.getHours();
+        setTimeout(greet, 3000);
+        setTimeout(clearing, 15000);
+        function greet() {
+            if (hours <= 12 && hours <= 24) {
+                morning.style.display = 'flex';
+                Evening.style.display = 'none';
+                after.style.display = 'none';
+            }
+            if (hours > 12 && hours < 18) {
+                morning.style.display = 'none';
+                Evening.style.display = 'none';
+                after.style.display = 'flex';
+            }
+            if (hours > 18 && hours < 24) {
+                morning.style.display = 'none';
+                Evening.style.display = 'flex';
+                after.style.display = 'none';
+            }
+        }
+        function clearing() {
+            morning.style.display = 'none';
+            Evening.style.display = 'none';
+            after.style.display = 'none';
+        }
+        function toggleHide() {
+
+            console.log("this is not workign")
+            if (burger.style.display != 'none') {
+                console.log("hii iam rushaan")
+                if (nav_item.style.display == 'flex') {
+                    
+                    navbar.style.flexDirection = 'row';
+                    nav_item.style.display = 'none';
+                    name.style.display = 'block'
+                }
+                else {
+                    navbar.style.flexDirection = 'column';
+                    nav_item.style.display = 'flex';
+                    name.style.display = 'none';
+                }
+            }
+        }
+        function only_hide() {
+            if(screen.width<490){
+            let body = document.getElementById('body');
+            nav_item.style.display = 'none';
+            navbar.style.flexDirection = 'row';
+            name.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+
+</html>

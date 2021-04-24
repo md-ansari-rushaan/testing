@@ -1,0 +1,1279 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--  adding css in html -->
+    <!-- <link rel="stylesheet" href="phone.css"> -->
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <title>Best web design for websites</title>
+</head>
+<style>
+    /* css reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {}
+
+    .hamberger {
+        width: 35px;
+        height: 35px;
+        display: none;
+        border: 1px solid rgb(134, 134, 134);
+        border-radius: 25px;
+        margin: auto 0px;
+    }
+
+    .hamberger hr {
+        width: 15px;
+        height: 2px;
+        color: beige;
+        /* height: inherit; */
+        /* width: inherit; */
+        position: relative;
+        top: 12px;
+        left: 9px;
+        background-color: black
+    }
+
+    #whatsapp {
+        height: 30px;
+        width: 30px;
+    }
+
+    #navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 100000000;
+    }
+
+    .support {
+        display: flex;
+        border: 2px solid black;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 0px;
+        padding: 0px 100px;
+    }
+
+    .MYsupport {
+        display: flex;
+    }
+
+    .details {
+        margin: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #phone {
+        width: 30px;
+        filter: invert(1);
+    }
+
+    .SocialSupport {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons {
+        margin: auto 10px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+
+    .contents {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 60px;
+        background-color: white;
+        z-index: 100000;
+    }
+
+    .stick {
+        position: sticky;
+    }
+
+    .items {
+        display: flex;
+        align-items: center;
+    }
+
+    .item {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .item a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        margin: auto 20px;
+        color: black;
+    }
+
+    #MYlogo {
+        width: 80px;
+        height: 80px;
+    }
+
+    #shop_logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2rem;
+        height: 75vh;
+        margin-top: 190px;
+    }
+
+    #home::before {
+        content: "";
+        position: absolute;
+        background: url(https://th.bing.com/th/id/R06cca9a63a75ac5f02a86036339c521b?rik=TtkeIc1hYW627A&riu=http%3a%2f%2f2.bp.blogspot.com%2f-xEI47QUqTWE%2fTzbhcY0AJII%2fAAAAAAAAA8w%2fmun6pODtMrU%2fs1600%2f303.Jpg&ehk=kSwWwSH6Mo9Ex%2bRsVWYx%2fcTeqwaf2qXttS8HRQqiP7U%3d&risl=&pid=ImgRaw) no-repeat center center/cover;
+        top: 150px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.87;
+        height: 90vh;
+        width: 100%;
+
+    }
+
+    .after {
+        width: 310px;
+        height: 45px;
+        border: 2px solid black;
+        border-radius: 14px;
+        background-color: rgb(64, 90, 90);
+        color: #d6d6d6;
+        font-weight: bold;
+        font-size: 1.1rem;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .before {
+        background-color: transparent;
+        color: white;
+    }
+
+    .arrow {
+        padding-top: 15px;
+    }
+
+    #arrow {
+        filter: invert(1);
+        height: 35px;
+        width: 40px;
+        animation-name: arrow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 5s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes arrow {
+        0% {
+            position: relative;
+            bottom: 20px;
+        }
+
+        50% {
+            position: relative;
+            bottom: 0px;
+        }
+
+        100% {
+            position: relative;
+            bottom: 20px;
+        }
+    }
+
+    #socialFeatures {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0px;
+    }
+
+    .featureIMG {
+        height: 120px;
+        width: 120px;
+        filter: invert(1);
+        box-shadow: 3px 3px 10px 10px grey;
+    }
+
+    .featuring {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 290px;
+        margin: auto;
+        font-size: 1.34rem;
+        color: #8E9DAE;
+    }
+
+    .featuring h3 {
+        color: black;
+        margin: 20px auto;
+    }
+
+    .item a:hover {
+        color: rgba(60, 60, 248, 0.747);
+    }
+
+    #OurClients {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        flex-direction: column;
+        margin: 100px auto;
+        font-weight: bold;
+    }
+
+    #OurClients h3,
+    h4 {
+        color: #8E9DAE;
+        margin: 10px auto;
+    }
+
+    #clientsnumber {
+        font-size: 7rem;
+    }
+
+    .review {
+        border-radius: 5px;
+        background-color: #03a9f4;
+        color: white;
+    }
+
+    #pricing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.7rem;
+    }
+
+    .palning {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: -webkit-fill-available;
+        font-size: 1.7rem;
+        margin: 30px auto;
+    }
+
+    .palning h6 {
+        margin: 10px auto;
+        color: #8E9DAE;
+    }
+
+    #rush {
+        color: #8E9DAE;
+        margin: 15px auto;
+    }
+
+    .book {
+        color: #03a9f4;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
+
+    .forward {
+        text-decoration: none;
+    }
+
+    .book:hover {
+        color: black;
+    }
+
+    .Plan h2 {
+        font-size: 2rem;
+    }
+
+    #ecomerce {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .silverplan {
+        margin: auto 50px;
+        border: 1px solid #a59e9e;
+        width: 380px;
+        padding: 40px 15px;
+    }
+
+    .unique {
+        width: 380px;
+    }
+
+    #commerceNAme {
+        font-size: 2.5rem;
+    }
+
+    #ename {
+        font-size: 1.5rem;
+    }
+
+    .demoIMG {
+        margin: 10px 0px;
+        width: inherit;
+        height: 320px;
+        transition: all 1s ease-in-out;
+    }
+
+    #Demo {
+        cursor: pointer;
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 10px;
+    }
+
+    .WebExample {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        width: 490px;
+        height: 540px;
+        padding: 0px 15px;
+    }
+
+    .demoIMG:hover {
+        transform: scale(1.2);
+    }
+
+    #readweb {
+        position: relative;
+        top: 215px;
+        z-index: 1000;
+        background-color: #FF9800;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border-color: #FF9800;
+        cursor: pointer;
+    }
+
+    #readweb a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #secvices {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 70px 0px;
+    }
+
+    #ServicesIMG {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 25px 15px;
+    }
+
+    .SRVC {
+        width: 33%;
+        overflow: hidden;
+        box-shadow: 0px 0px 7px 6px grey;
+        height: 420px;
+    }
+
+    .SRVC1 {
+        margin-top: auto;
+        height: 345px;
+    }
+
+    .SRVC2 {
+        margin-top: auto;
+        height: 375PX;
+        box-shadow: 0px -7px 7px 0px grey
+    }
+
+    #secvices h6,
+    h4 {
+        margin: 15px auto;
+    }
+
+    #secvices h5 {
+        color: #8E9DAE;
+    }
+
+    #secvices h4 {
+        color: rgb(115, 115, 115);
+    }
+
+    #secvices h6 {
+        color: black;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+
+    #Contact {
+        background-image: url(https://www.zauca.com/wp-content/plugins/mesmerize-companion/theme-data/mesmerize/sections/images/xmockup-863469.jpg.pagespeed.ic.zT5hlxaQ8j.webp);
+        background-position: center top;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        padding: 150px 5px;
+        color: white;
+    }
+
+    .form {
+        width: 417px;
+        height: 38px;
+        margin: 15px auto;
+    }
+
+    .contactForm {
+        margin: 40px auto;
+    }
+
+    .MyTexy {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    #submit {
+        padding: 10px 30px;
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contactForm {
+        background-color: white;
+        padding: 30px 50px;
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    #footer {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        color: white;
+    }
+
+    .supporting {
+        border-right: 1px solid rgba(128, 128, 128, .2);
+        border-top: black;
+        border-bottom: black;
+        padding: 10px 40px;
+        height: auto;
+    }
+
+    .supporting p {
+        margin: 7px 0px;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+
+    .supporting p:nth-child(1) {
+        margin: 15px 0px;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    #card {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+        margin: auto 20px;
+        font-size: 1.4rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 1570px) {
+        .palning {
+            flex-wrap: wrap;
+        }
+
+        .silverplan {
+            margin: 15px 50px;
+        }
+
+        .WebExample {
+            margin: inherit;
+        }
+
+        #home {
+            margin-top: 210px;
+        }
+
+        .arrow {
+            padding-top: 13px;
+        }
+
+        #socialFeatures {
+            padding: 15px 0px;
+            flex-wrap: wrap;
+        }
+
+        .featuring {
+            margin: 25px 50px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        /*.contents{
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }*/
+        .hamberger {
+            display: block;
+        }
+
+        .items {
+            display: none;
+        }
+
+        #home {
+            font-size: 1.6rem;
+        }
+
+        .supporting {
+            height: auto;
+        }
+
+        .MyTexy {
+            max-width: 0%;
+        }
+    }
+
+    @media only screen and (max-width: 699px) {
+        .MyTexy {
+            width: 0px;
+            max-width: 0%;
+        }
+
+        #home {
+            font-size: 1.5rem;
+        }
+
+        .contactForm {
+            width: auto;
+            padding: 30px 10px;
+        }
+
+        #footer {
+            flex-direction: column;
+            padding: 20px 0px;
+        }
+
+        .supporting {
+            border-right: black;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .after {
+            padding: 3px 30px;
+            width: auto;
+        }
+
+        #pricing h1 {
+            padding: 0px 80px;
+        }
+
+        .palning {
+            margin: 15px auto;
+        }
+
+        #commerceNAme {
+            padding: 0px 50px;
+        }
+
+        .support {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 470px) {
+        .form {
+            width: auto;
+        }
+
+        .WebExample {
+            width: 285px;
+        }
+
+        .demoIMG {
+            height: 250px;
+        }
+
+        .unique {
+            width: 300px;
+        }
+
+        .silverplan {
+            margin: 15px 0px;
+            width: 300px;
+        }
+
+        .Plan {
+            width: 300px;
+        }
+
+        .planimg {
+            width: 270px;
+        }
+
+        .form {
+            width: 300px;
+        }
+
+        #Contact {
+            font-size: 1.7rem;
+        }
+
+        #home {
+            font-size: 1.2rem;
+        }
+
+        .helpline {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+        }
+
+        .after {
+            margin: 10px 0px;
+        }
+    }
+
+    @media only screen and (max-width: 369px) {
+        #home {
+            font-size: 1rem;
+        }
+
+        #services {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<body>
+
+    <!--  this is a navbar code  -->
+    <navbar id="navbar">
+        <!--  this section is maded for  contact  -->
+        <div class="support">
+            <!--  this section is maded for persnol contact  -->
+            <div class="MYsupport"><img id="phone"
+                    src="https://th.bing.com/th/id/Rf764c3307d3790c8739786e6bb3d6d8d?rik=yHmCujQQ5KJ9LA&amp;riu=http%3a%2f%2fwww.roundhayroofing.co.uk%2fwp-content%2fthemes%2fpaul_burtle%2fimages%2fphone_icon_small.png&amp;ehk=2VqHSU0t1QmHt14nwEtBsrY2Zf53CPO5Va4w6bIyj5M%3d&amp;risl=&amp;pid=ImgRaw"
+                    alt>
+                <p class="details">8744941858</p><img
+                    src="https://th.bing.com/th/id/R8902142590e4264bda0766f909eb5652?rik=qn4jYg6wtgvc8A&amp;riu=http%3a%2f%2fwww.hollywoodyouththeatre.com%2fhome%2fwp-content%2fuploads%2f2011%2f05%2fgmail-icon-small.png&amp;ehk=oXo%2bnfS6BsLrmPalNATEGEY5mlJK9Xe9WbytYObMcaE%3d&amp;risl=&amp;pid=ImgRaw"
+                    alt>
+                <p class="details">mdrushaanansari786@gmail.com</p>
+            </div>
+            <!--  this section is maded for social contact  -->
+            <div class="SocialSupport"><img class="icons" id="whatsapp"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/50px-WhatsApp.svg.png"
+                    alt><img class="icons"
+                    src="https://th.bing.com/th/id/Rfc6f83984ff33680530164159b3757dd?rik=lQMIVuegmyg4og&amp;riu=http%3a%2f%2fjacobsen.com%2fthemes%2fjacobsen%2fimages%2ficons%2ffacebook-icon-small.png&amp;ehk=a2O9U4RHsYJ1RR92A2nY4WkJR8ZkK1qgk3EhAm0pNSc%3d&amp;risl=&amp;pid=ImgRaw"
+                    alt><img class="icons"
+                    src="https://th.bing.com/th/id/Rf25603aa3c37bd21bde7a506edaa3ab7?rik=Sp48EMi8WhDZ3A&amp;riu=http%3a%2f%2fwww.ebi.ac.uk%2fcompneur-srv%2fbiomodels%2fGRAPHICS%2ftwitter_logo_small.png&amp;ehk=AeQkUUTPygyYOXg5hzr%2bcmIJT%2bVp9xGtoG8q%2f7NBJko%3d&amp;risl=&amp;pid=ImgRaw"
+                    alt><img class="icons"
+                    src="https://th.bing.com/th/id/OIP.ks4uCisooPZ8DlmNeJ1QoAAAAA?pid=Api&amp;rs=1" alt></div>
+        </div>
+        <!--  this is a items avilable in our website  -->
+        <div id="contents" class="contents"><img id="MYlogo"
+                src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/29/4599032029_756a58b6-aeba-4e8e-ad43-ccbc9bb103a2.png?cb=1612769867"
+                alt>
+            <div id="hamberger" class="hamberger" onclick="toggle()">
+                <hr>
+                <hr>
+                <hr>
+            </div>
+            <ul id="navbar_after" class="items">
+                <li class="item"><a href="#home">Home</a></li>
+                <li class="item"><a href="#socialFeatures">Feature</a></li>
+                <li class="item"><a href="#OurClients">Reviews</a></li>
+                <li class="item"><a href="#pricing">Pricing</a></li>
+                <li class="item"><a href="#Demo">Demo</a></li>
+                <li class="item"><a href="#secvices">Services</a></li>
+                <li class="item"><a href="#Contact">Contact</a></li>
+                <li class="item"><a href="#footer">Support</a></li>
+                <li class="item"><img id="shop_logo"
+                        src="https://cdn2.iconfinder.com/data/icons/user-interface-1-3/85/shopping_cart_trolley_caddy_ecommerce-512.png"
+                        alt></li>
+            </ul>
+        </div>
+        <!--  here our navbar ends -->
+    </navbar>
+    <!--  this is section is for home -->
+    <div id="Body" onclick="allFunction()">
+        <section id="home">
+            <div>
+                <h1>GET BEST</h1>
+            </div>
+            <div>
+                <h1>QUALITY PROFESSIONAL </h1>
+            </div>
+            <div>
+                <h1>Website</h1>
+            </div>
+            <div>
+                <h1>@ JUST RS. 3000 IN 24</h1>
+            </div>
+            <div>
+                <h1>HOURS</h1>
+            </div>
+            <div class="function">
+                – 1 Free Domain
+
+
+            </div>
+            <div class="function">
+                <h6>
+                    – 5 Page Hosting
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – Business Email id
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – SEO Ready Website
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – Mobile Friendly Website
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – Unlimited Images & Videos
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – Unlimited (Bandwidth/ Space)
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – 24/7 Support (Phone/Email/Chat)
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – Phone Support Available in Hindi + English Only
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+                    – No Hidden or Extra Charges
+
+                </h6>
+            </div>
+            <div class="function">
+                <h6>
+
+                    <br>
+                    Note: GST @ 18% Applicable on All Purchase<br>
+                </h6>
+            </div>
+            <div class="function">
+                <h6><br>
+                    Call- 8744941858<br><br>
+
+                </h6>
+            </div>
+            <div class="helpline">
+                <button class="after">Pay After Website Make & Run</button>
+                <button class="before after">Call us Now</button>
+            </div>
+            <div class="arrow"><img id="arrow"
+                    src="https://th.bing.com/th/id/R277f4303ddac1c39998276251d477705?rik=tbLrU28BIKjDrA&amp;riu=http%3a%2f%2funiqsource.com%2fwp-content%2fuploads%2f2014%2f07%2fsmall-black-down-arrow.png&amp;ehk=2xlsN4RH4WCNW0xcxzONoEowY3N8kRA%2fXH7XgP5RgMg%3d&amp;risl=&amp;pid=ImgRaw"
+                    alt></div>
+        </section>
+
+        <section id="socialFeatures">
+            <div class="featuring"><img class="featureIMG"
+                    src="https://www.manageengine.com/products/desktop-central/images/zd-fea-icon-2.png" alt>
+                <h3>
+                    Lighting Speed
+
+                </h3>
+                <h4>
+                    Site speed and design are two of the most important ranking factors Google takes into consideration,
+                    as
+                    they
+                    have the biggest effect of cutomer staying on site as the website respond faster.
+
+                </h4>
+            </div>
+            <div class="featuring"><img class="featureIMG"
+                    src="https://th.bing.com/th/id/OIP.9Yin4pb4TfR3bt9CcYuPvAAAAA?pid=Api&amp;rs=1" alt>
+                <h3>
+                    Responsive Design
+
+                </h3>
+                <h4>
+                    Responsive Website is the approach that suggests website design and development should respond to
+                    the
+                    user’s
+                    request irrespective of device they use (mobile/ laptop/ desktop/ ipad).
+
+                </h4>
+            </div>
+            <div class="featuring"><img class="featureIMG"
+                    src="https://th.bing.com/th/id/OIP.GWPW8Xh9UJaYlxaA2wbqbQHaHa?pid=Api&amp;rs=1" alt>
+                <h3>
+                    Payment Gateway
+
+                </h3>
+                <h4>
+                    Affordable web design services in India, includes payment gateway for easy online transfer from any
+                    customer
+                    (debit/ credit…etc) account to your account for any sales website does.
+
+                </h4>
+            </div>
+            <div class="featuring"><img class="featureIMG"
+                    src="https://th.bing.com/th/id/OIP.npQyH6TmWQwthjXl-DG2sgHaHa?pid=Api&amp;w=486&amp;h=486&amp;rs=1"
+                    alt>
+                <h3>
+                    Social Media
+
+                </h3>
+                <h4>
+                    Your social media presence doesn’t have to end on your social profile. By making your website more
+                    social
+                    media-friendly, you are reaching more & more potential customers online & more sales.
+
+                </h4>
+            </div>
+            <div class="featuring"><img class="featureIMG"
+                    src="https://th.bing.com/th/id/OIP.Ry5a8_Di50RKiIUQuqne4QHaJl?pid=Api&amp;rs=1" alt>
+                <h3>
+                    Support
+
+                </h3>
+                <h4>
+                    We at Rush, considering the importance of business that we are into, now provides around the clock
+                    support
+                    to enhance its customer support, which can ensure 99.9% uptime of websites.
+
+                </h4>
+            </div>
+        </section>
+        <section id="OurClients">
+            <h1>Real Time Clients</h1>
+            <h3>We are New Here But Instantly Our Clients Will Be More Than You Think</h3>
+            <h4>Made Our First Clients Of This wWebsite</h4>
+            <h1 id="clientsnumber">0</h1>
+            <button class="after review">
+                Give Review To Our Website
+
+            </button>
+        </section>
+        <section id="pricing">
+            <h1>Buisness Website Designing Price</h1>
+            <h3 id="rush">Rush is India’s most affordable, low cost web design company in India offering website
+                designing
+                with
+                Unbeatable “Pricing”</h3>
+            <div class="palning">
+                <div class="Plan">
+                    <img class="planIMG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/10/xxxplanBasic.png,,Mic.6kXtttkuSu.webp,Mic.xk9DWYMhH4.webp.pagespeed.ic.aEvs7QQt4Y.webp"
+                        alt>
+                    <h2>Basic Plan - Rs.5500</h2>
+                    <h6>– 1 Free Domain Name<br>
+                        5page (Dynamic Website)<br>
+                        BusinessEmail id<br>
+                        UnlimitedImages & Videos<br>
+                        Unlimited(Bandwidth/ Space)<br>
+                        SEO Ready Website<br>
+                        100% Responsive Website<br>
+                        Live Chat Integration<br>
+                        Payment Gateway Integration<br>
+                        Social Media Integration<br>
+
+
+                        27*7 Support (Phone/Email/Chat)<br><br>Note: GST @ 18% Applicable on All Purchase<br><br>
+                        <a class="book" href="#">Book For Free Now
+                        </a>
+                    </h6>
+                    <p class="book forward">>></p>
+                </div>
+                <div class="Plan"><img class="planIMG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/11/xxxxplanStandard.png,,,,Mic.HRmo08fhd9.webp,,Mic.-XT1ocgNFa.webp,Mic._a52zMdMFm.webp.pagespeed.ic.B1lS-MhB1a.webp"
+                        alt>
+                    <h2>Classic Plan - Rs.6500</h2>
+                    <h6>– 1 Free Domain Name<br>
+                        UL Pages* (Dynamic Website)<br>
+                        Business Email id<br>
+                        Unlimited Images & Videos<br>
+                        Unlimited (Bandwidth/ Space)<br>
+                        SEO (Express) Ready Website<br>
+                        100% Responsive Website<br>
+                        Live Chat Integration<br>
+                        Payment Gateway Integration<br>
+                        Social Media Integration<br>
+
+                        24*7 Support (Phone/Email/Chat)<br><br>Note: GST @ 18% Applicable on All Purchase<br><br>
+                        <a class="book" href="#">Book For Free Now</a>
+                    </h6>
+                    <p class="book forward">>></p>
+                </div>
+                <div class="Plan"><img class="planIMG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/10/xxxxxplanPremium.png,,,,,,,,Mic.9bqDQ0_xbr.webp,,,,Mic.3YATC-CzGR.webp,,Mic.wg9pdr6yCK.webp,Mic.vh4T7GFYSE.webp.pagespeed.ic.IlhNYRlqbJ.webp"
+                        alt>
+                    <h2>Premium Plan - Rs.9000</h2>
+                    <h6>– 1 Free Domain Name<br>
+
+                        7 ULPages* (Dynamic Website)
+                        Unlimited Email id<br>
+                        Unlimited Images & Videos<br>
+                        Unlimited (Bandwidth/ Space)<br>
+                        SEO (Express) Ready Website<br>
+                        100% Responsive Website<br>
+                        Live Chat Integration<br>
+                        Payment Gateway Integration<br>
+                        Social Media Integration<br>
+                        cPanel* Access<br>
+                        SSL Certificate<br>
+
+                        24*7 Support (Phone/Email/Chat)<br><br><br>Note: GST @ 18% Applicable on All Purchase<br><br>
+                        <a class="book" href="#">Book For Free Now</a>
+                        <p class="forward">>></p>
+
+                    </h6>
+                </div>
+            </div>
+        </section>
+        <section id="ecomerce">
+            <h1 id="commerceNAme">E-commerce Website Designing Price</h1>
+            <h4 id="ename">Rush is most affordable, low cost ecommerce web design company in India offering website
+                designing
+                with Unbeatable “Pricing”</h4>
+            <div class="palning">
+                <div class="silverplan"><img id="planBiG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/12/xxxSilver2.png,,Mic.AsT2Y6nfGx.webp,Mic.NlkvRdzoab.webp.pagespeed.ic.upyTGdG41m.webp"
+                        alt>
+                    <h2>SilverPlan - Rs.9500</h2>
+                    <h6>
+                        1 Free Domain Name<br>
+                        5 Pages (Basic Design)<br>
+                        Unlimited Product Listing<br>
+                        Business Email id<br>
+                        Unlimited Images & Videos<br>
+                        Unlimited (Bandwidth/ Space)<br>
+                        100% Responsive Website<br>
+                        Social Media Integration<br>
+                        Live Chat Integration<br>
+                        Payment Gateway<br>
+
+                        24*7 Support (Phone/Email/Chat)<br>
+                        Annual Renewal Rs. 3000<br><br>Note: GST @ 18% Applicable on All Purchase<br><a class="book"
+                            href="#">Book For Free
+                            Now</a>
+                    </h6>
+                    <p class="forward">>></p>
+
+                </div>
+                <div class="silverplan"><img id="planBiG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/12/xxxxGold2.png,,,,Mic.mh9s4UgF2F.webp,,Mic.0eXEAprNz1.webp,Mic.xtb_Hk56Bg.webp.pagespeed.ic._uQFeC81I0.webp"
+                        alt>
+                    <h2>GoldPlan - Rs.14000</h2>
+                    <h6>
+
+                        1 Free Domain Name<br>
+                        UL Pages* (Dynamic Design)<br>
+                        Unlimited Product Listing<br>
+                        Unlimited Email id<br>
+                        Unlimited Images & Videos<br>
+                        Unlimited (Bandwidth/ Space)<br>
+                        100% Responsive Website<br>
+                        Social Media Integration<br>
+                        Live Chat Integration<br>
+                        Payment Gateway<br>
+                        cPanel* Access<br>
+                        SSL Certificate<br>
+
+                        24*7 Support (Phone/Email/Chat)<br>
+                        Annual Renewal Rs. 3500<br><a class="book" href="#">Book For Free Now</a>
+                    </h6>
+
+                    <p class="forward">>></p>
+                </div>
+                <div class="silverplan">
+                    <img class="unique" id="planBiG"
+                        src="https://www.zauca.com/wp-content/uploads/2017/12/xcustom-solutions.jpg.pagespeed.ic.SNR8rx6FlW.webp"
+                        alt>
+                    <h2>Custom Solution for Enterprises</h2>
+                    <h6>
+
+                        Almost any functionality that a client wants<br>can be coded and integrated into<br>the website,
+                        android
+                        application
+                        and CMS.<br>
+                        Common applications Special functionality for which<br>there is not an off-the-shelf
+                        solution<br>
+                        Extend <br>
+                        common web<br>
+                        components with your special business rules Integrate<br>your web site with other systems.<br>We
+                        know
+                        software and<br>
+
+                        we engineer custom solutions<br><a class="book" href="#">Book For Free Now</a>
+                    </h6>
+                    <p class="forward">>></p>
+                </div>
+
+
+
+            </div>
+        </section>
+        <section id="Demo">
+            <h2 id="commerceNAme">ProtoFoil</h2>
+            <h4 id="ename">With the Internet spreading like wildfire and reaching every part of our daily life, more and
+                more
+                traffic is directed to websites in search for information.</h4>
+            <div class="palning">
+                <div class="WebExample">
+                    <button id="readweb"><a href="Rushaan Resturant/index.html" target="_blank">Read
+                            More</a></button><img class="demoIMG" src="https://www.bing.com/images/blob?bcid=S50-kI2aL2YC8Q" alt>
+                    <h5>MyOnlineMeal , Mumbai</h5>
+                    <h6>This is basically made for a restuarant to make thies Buissnes to Online And He Have Earned More
+                        Than
+                        25000Rs. in only 3 year. Do you want website like this So, hurry up!!. Because there is offer in
+                        this
+                        Website</h6>
+                </div>
+                <div class="WebExample">
+                    <button id="readweb"><a href="I.S Enterprises website/sarik.html" target="_blank">Read
+                            More</a></button><img class="demoIMG" src="https://www.bing.com/images/blob?bcid=Syv8QBmvMWYCyQ" alt>
+                    <h5>I.S Enterprises , Delhi</h5>
+                    <h6>This is basically Made for An enterprises which sold Raw clothes And Also make thier website to
+                        online
+                        By Help of us and this get succesfully succes Beacuse the have Earned more than 1500000Rs. in
+                        only 4
+                        months This website will come Custom solution for Enterprises. and there is alos offer in this
+                        website
+                        also So, be hurry up.</h6>
+                </div>
+                <div class="WebExample">
+                    <button id="readweb"><a href="new website/index.html" target="_blank">Read More</a></button><img
+                        class="demoIMG" src="https://www.bing.com/images/blob?bcid=Sy-eiyFHhGYCqxcxoNWLuD9SqbotqVTdPzY" alt>
+                    <h5>OUR NATURE , Ahemdabad</h5>
+                    <h6>This website for Expressing the importance of nature An help us to feel the nature and in this
+                        website
+                        you will know many thing about Nature. this website is not for any loss or profitt so, it has 0
+                        cost
+                        of
+                        profit. you can make loike this website for giving information to public and you can earn money
+                        by
+                        Affiliate Marketing.</h6>
+                </div>
+            </div>
+            <button id="readweb" style="top: 0px"><a href="#">Read More Demo Website By Rush</a></button>
+        </section>
+        <section id="secvices">
+            <h6>About Rush Consultancy Services</h6>
+            <h2>Best Website Designing Company</h2>
+            <h4>Till Now Only 5+ Websites is Delivered</h4>
+            <h5>Rush, offers wide range of <em>Website design</em> services in India including business website
+                designing,
+                personal blogs, web portals</h5>
+            <h5>designing, micro websites, flash websites, e-commerce websites designing, static websites, and dynamic
+                websites
+                across all</h5>
+            <h5>categories & sectors.</h5>
+            <div id="ServicesIMG"><img class="SRVC SRVC1"
+                    src="https://www.zauca.com/wp-content/uploads/2017/10/xxxxxxdigital_marketing.jpg,,,,,,,,,,,,,,,,Mic.SwbrHRqVxb.webp,,,,,,,,Mic.CGCbNWKNK_.webp,,,,Mic.S1StRJmN74.webp,,Mic.thgKrYXVGj.webp,Mic.CeXJ7lptg8.webp.pagespeed.ic.NPbwNHvyf3.webp"
+                    alt><img class="SRVC"
+                    src="https://www.zauca.com/wp-content/uploads/2017/10/xxxxxxxxxxWeb-Design-Company.jpg,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mic.OZT-9XKt73.webp,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mic.12lqkcrqiG.webp,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mic.w6mFf0qfM1.webp,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Mic.8Z_yGxmYWh.webp,,,,,,,,,,,,,,,,Mic.nv_0GJdWXY.webp,,,,,,,,Mic.5P92yxzr_7.webp,,,,Mic.29M49u7UBp.webp,,Mic.Mw2vwjPga1.webp,Mic.JB-q1QWBmh.webp.pagespeed.ic.Jmh8Olj9OL.webp"
+                    alt><img class="SRVC SRVC2"
+                    src="https://www.zauca.com/wp-content/uploads/2017/12/xxandroid-development-technource.png,Mic.88YmcR2yxG.webp.pagespeed.ic.wF6fw5pN5d.webp"
+                    alt></div>
+        </section>
+        <section id="Contact">
+            <h1>Contact Us</h1>
+            <h4 style="color: white">Please feel free to contact us & we would be happy to assist you!</h4>
+            <h5>
+                Email Ids
+
+            </h5>
+            <h5>For Support: mdrushaanansari786@gmail.com</h5>
+            <h5>For Sales: mdrushaanansaricoc@gmail.com</h5>
+            <h6>Phone Number</h6>
+            <h6>For Support: 8744941858</h6>
+            <div class="contactForm">
+                <form action="/contact" method="POST">
+                    <div>
+                        <div>
+                            Name*
+
+                        </div>
+                        <input class="form" type="text" name="name" placeholder="Enter Your Name">
+                    </div>
+                    <div>
+                        <div>
+                            Phone*
+
+                        </div>
+                        <input class="form" type="number" name="phone" placeholder="Enter Your Phone Number">
+                    </div>
+                    <div>
+                        <div>
+                            Type Of Website
+
+                        </div>
+                        <input class="form" type="text" name="Web" placeholder="Select">
+                    </div>
+                    <div>
+                        <div>
+                            Language
+
+                        </div>
+                        <input class="form" type="text" name="language" placeholder="Select">
+                    </div>
+                    <div>
+                        <div>
+                            Email*
+
+                        </div>
+                        <input class="form" type="text" name="Email" placeholder="Enter Your Email">
+                    </div>
+                    <div>
+                        <div>
+                            Comment Or Message
+
+                        </div>
+                        <textarea class="MyTexy" name="Message" cols="90" rows="12"></textarea>
+                    </div>
+                    <div>
+                        <button id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="supporting">
+                <p>Terms & Conditions</p>
+                <p>About Us</p>
+                <p>Terms Of Services</p>
+                <p>Refund Policy</p>
+                <p>Privacy Policy</p>
+                <p>Contact</p>
+            </div>
+            <div class="supporting">
+                <p>Plan & Pricing</p>
+                <p>Buissness Plan</p><br>
+                <p>Basic Plan</p>
+                <p>Classic Plan</p>
+                <p>Premium Plan</p>
+                <p>e-commerece Pricing</p><br>
+                <p>Silver Plan</p>
+                <p>Gold Plan</p>
+            </div>
+            <div id="card">
+                <h1>Rush- 8744941858 - Website Designing</h1>
+                <h5>© 2021-2022, Rush Consultancy Services. All right reserved.</h5>
+                <div id="footIMG"><img class="icons" id="whatsapp"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/50px-WhatsApp.svg.png"
+                        alt><img class="icons"
+                        src="https://th.bing.com/th/id/Rfc6f83984ff33680530164159b3757dd?rik=lQMIVuegmyg4og&amp;riu=http%3a%2f%2fjacobsen.com%2fthemes%2fjacobsen%2fimages%2ficons%2ffacebook-icon-small.png&amp;ehk=a2O9U4RHsYJ1RR92A2nY4WkJR8ZkK1qgk3EhAm0pNSc%3d&amp;risl=&amp;pid=ImgRaw"
+                        alt><img class="icons"
+                        src="https://th.bing.com/th/id/Rf25603aa3c37bd21bde7a506edaa3ab7?rik=Sp48EMi8WhDZ3A&amp;riu=http%3a%2f%2fwww.ebi.ac.uk%2fcompneur-srv%2fbiomodels%2fGRAPHICS%2ftwitter_logo_small.png&amp;ehk=AeQkUUTPygyYOXg5hzr%2bcmIJT%2bVp9xGtoG8q%2f7NBJko%3d&amp;risl=&amp;pid=ImgRaw"
+                        alt><img class="icons"
+                        src="https://th.bing.com/th/id/OIP.ks4uCisooPZ8DlmNeJ1QoAAAAA?pid=Api&amp;rs=1" alt></div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+
+    const small_nav = document.getElementById('hamberger');
+    const small_nav_items = document.getElementById('navbar_after');
+    const Body_html = document.getElementById('Body');
+    const contents = document.getElementById('contents');
+
+    function toggle() {
+        if (small_nav_items.style.display == 'none') {
+            small_nav_items.style.display = 'block';
+            small_nav.style.display = 'none';
+            contents.style.flexDirection = 'column';
+            contents.style.justifyContent = 'center';
+            contents.style.alignItems = 'center';
+
+        }
+        else {
+
+            small_nav_items.style.display = 'none';
+            small_nav.style.display = 'block';
+            contents.style.flexDirection = 'row';
+            contents.style.justifyContent = 'space-between';
+            //contents.style.alignItems = 'center';
+        }
+    }
+    function allFunction() {
+        if (small_nav.style.display == 'none' && small_nav_items.style.display=='block') {
+            small_nav_items.style.display = 'none';
+            small_nav.style.display='block';
+            contents.style.flexDirection = 'row';
+            contents.style.justifyContent = 'space-between';
+        }
+    }
+</script>
+
+</html>
